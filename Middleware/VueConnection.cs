@@ -10,14 +10,13 @@ using System.Net.NetworkInformation;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
-namespace core_pj.Middleware.VueConnection
+namespace template_core_api_vue.Middleware.VueConnection
 {
     public static class VueConnection
     {
-
-        private static int Port { get; } = 8080;
+        private static int Port { get; } = 8010;
         private static Uri DevelopmentServerEndpoint { get; } = new Uri($"http://localhost:{Port}");
-        private static TimeSpan Timeout { get; } = TimeSpan.FromSeconds(60);
+        private static TimeSpan Timeout { get; } = TimeSpan.FromSeconds(300);
 
         private static string DoneMessage { get; } = "DONE  Compiled successfully in";
 
@@ -101,4 +100,3 @@ namespace core_pj.Middleware.VueConnection
                 .Contains(Port);
     }
 }
-
